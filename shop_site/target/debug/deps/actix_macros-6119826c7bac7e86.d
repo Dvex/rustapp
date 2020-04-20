@@ -1,5 +1,0 @@
-C:\wamp\www\rustapplications\shop_site\target\debug\deps\actix_macros-6119826c7bac7e86.dll: C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-macros-0.1.1\src\lib.rs
-
-C:\wamp\www\rustapplications\shop_site\target\debug\deps\actix_macros-6119826c7bac7e86.d: C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-macros-0.1.1\src\lib.rs
-
-C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-macros-0.1.1\src\lib.rs:
