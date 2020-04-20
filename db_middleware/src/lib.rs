@@ -54,7 +54,7 @@ impl Conn {
     }
 
     pub fn find_sale(&self,id_producto:Option<i32>, id_moneda:Option<i32>, anho:i32, mes:u32, _usuario:&str) -> Result<Vec<TablaVentas>, Error> {
-        let last_day = get_days_from_month(anho, mes);
+        let last_day = get_days_from_month(anho, mes) as u32;
         let dt_start: Option<NaiveDateTime> = Some(NaiveDate::from_ymd(anho, mes, 1).and_hms(0, 0, 0));
         let dt_end: Option<NaiveDateTime> = Some(NaiveDate::from_ymd(anho, mes, last_day).and_hms(0, 0, 0));
         tabla_ventas::table
