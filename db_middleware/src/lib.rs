@@ -54,8 +54,9 @@ impl Conn {
     }
 
     pub fn find_sale(&self,id_producto:Option<i32>, id_moneda:Option<i32>, anho:i32, mes:u32, _usuario:&str) -> Result<Vec<TablaVentas>, Error> {
+        let last_day = get_days_from_month(anho, mes);
         let dt_start: Option<NaiveDateTime> = Some(NaiveDate::from_ymd(anho, mes, 1).and_hms(0, 0, 0));
-        let dt_end: Option<NaiveDateTime> = Some(NaiveDate::from_ymd(anho, mes, 31).and_hms(0, 0, 0));
+        let dt_end: Option<NaiveDateTime> = Some(NaiveDate::from_ymd(anho, mes, last_day).and_hms(0, 0, 0));
         tabla_ventas::table
             .filter(tabla_ventas::id_producto.eq(id_producto))
             .filter(tabla_ventas::id_moneda.eq(id_moneda))
@@ -63,4 +64,21 @@ impl Conn {
             .load(&self.0)
             .map_err(|e|e.into())
     }
+}
+
+//#[PRIVATE]
+fn get_days_from_month(anho: i32, mes: u32) -> i64 {
+    NaiveDate::from_ymd(
+        match anho {
+            12 => anho + 1,
+            _ => anho,
+        },
+        match mes {
+            12 => 1,
+            _ => mes + 1,
+        },
+        1,
+    )
+    .signed_duration_since(NaiveDate::from_ymd(anho, mes, 1))
+    .num_days()
 }

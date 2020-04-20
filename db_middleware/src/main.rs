@@ -64,20 +64,6 @@ fn main() -> Result<(), Error> {
     println!("{:?}", p);
   }
   */
-  let year = 2018;
-    for (m, d) in (1..=12).map(|m| {
-        (
-            m,
-            if m == 12 {
-                NaiveDate::from_ymd(year + 1, 1, 1)
-            } else {
-                NaiveDate::from_ymd(year, m + 1, 1)
-            }.signed_duration_since(NaiveDate::from_ymd(year, m, 1))
-            .num_days(),
-        )
-    }) {
-        println!("days {} in month {}", d, m);
-    }
 
   let r = conn.find_sale(Some(7), Some(1), 2000, 1, "WEB")?;
   for p in r {
