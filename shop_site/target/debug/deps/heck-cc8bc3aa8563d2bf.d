@@ -1,0 +1,13 @@
+C:\wamp\www\rustapplications\shop_site\target\debug\deps\heck-cc8bc3aa8563d2bf.rmeta: C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\lib.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\camel.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\kebab.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\mixed.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\shouty_snake.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\snake.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\title.rs
+
+C:\wamp\www\rustapplications\shop_site\target\debug\deps\libheck-cc8bc3aa8563d2bf.rlib: C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\lib.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\camel.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\kebab.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\mixed.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\shouty_snake.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\snake.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\title.rs
+
+C:\wamp\www\rustapplications\shop_site\target\debug\deps\heck-cc8bc3aa8563d2bf.d: C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\lib.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\camel.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\kebab.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\mixed.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\shouty_snake.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\snake.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\title.rs
+
+C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\lib.rs:
+C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\camel.rs:
+C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\kebab.rs:
+C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\mixed.rs:
+C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\shouty_snake.rs:
+C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\snake.rs:
+C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\heck-0.3.1\src\title.rs:

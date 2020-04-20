@@ -1,0 +1,11 @@
+C:\wamp\www\rustapplications\shop_site\target\debug\deps\unicode_segmentation-44664860ea54123f.rmeta: C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\lib.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\grapheme.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\tables.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\word.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\sentence.rs
+
+C:\wamp\www\rustapplications\shop_site\target\debug\deps\libunicode_segmentation-44664860ea54123f.rlib: C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\lib.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\grapheme.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\tables.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\word.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\sentence.rs
+
+C:\wamp\www\rustapplications\shop_site\target\debug\deps\unicode_segmentation-44664860ea54123f.d: C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\lib.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\grapheme.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\tables.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\word.rs C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\sentence.rs
+
+C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\lib.rs:
+C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\grapheme.rs:
+C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\tables.rs:
+C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\word.rs:
+C:\Users\ASUS\.cargo\registry\src\github.com-1ecc6299db9ec823\unicode-segmentation-1.6.0\src\sentence.rs:
