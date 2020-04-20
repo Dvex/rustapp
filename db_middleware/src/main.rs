@@ -56,9 +56,18 @@ fn main() -> Result<(), Error> {
   let r = conn.put_product("Producto 1")?;
   println!("Added currency: {:?}", r);
   */
+  
+  /*
   let r = conn.find_currency(Some("PEN".to_owned()), 10)?;
   for p in r {
     println!("\n-----Currency--------\n");
+    println!("{:?}", p);
+  }
+  */
+
+  let r = conn.find_sale(Some(7), Some(1), 2000, 1, "WEB")?;
+  for p in r {
+    println!("\n-----SALE--------\n");
     println!("{:?}", p);
   }
 

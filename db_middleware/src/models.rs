@@ -15,7 +15,7 @@ use bigdecimal::BigDecimal;
 pub struct TablaMoneda {
     pub id_moneda: i32,
     pub iso_moneda: Option<String>,
-    pub descripcion_moneda: Option<String>,
+    pub descripcion_moneda: Option<String>
 }
 
 #[derive(Queryable, Debug, Identifiable)]
@@ -23,7 +23,7 @@ pub struct TablaMoneda {
 #[primary_key(id_producto)]
 pub struct TablaProducto {
     pub id_producto: i32,
-    pub descripcion_producto: Option<String>,
+    pub descripcion_producto: Option<String>
 }
 
 #[derive(Queryable, Debug, Identifiable)]
@@ -34,7 +34,7 @@ pub struct TablaVentas {
     pub id_producto: Option<i32>,
     pub id_moneda: Option<i32>,
     pub monto: Option<BigDecimal>,
-    pub fecha: Option<NaiveDateTime>,
+    pub fecha: Option<NaiveDateTime>
 }
 
 #[derive(Queryable, Insertable, Clone, Debug)]
