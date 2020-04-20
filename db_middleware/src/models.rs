@@ -2,6 +2,9 @@
 #![allow(clippy::all)]
 extern crate chrono;
 
+use serde::{Deserialize, Serialize};
+use serde_derive::*;
+
 use crate::schema::tabla_moneda;
 use crate::schema::tabla_producto;
 use crate::schema::tabla_ventas;
@@ -26,7 +29,7 @@ pub struct TablaProducto {
     pub descripcion_producto: Option<String>
 }
 
-#[derive(Queryable, Debug, Identifiable)]
+#[derive(Queryable, Serialize, Deserialize, Debug, Identifiable)]
 #[table_name = "tabla_ventas"]
 #[primary_key(id_venta)]
 pub struct TablaVentas {
