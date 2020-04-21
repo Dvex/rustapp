@@ -9,18 +9,14 @@ use actix_web::{web, middleware, HttpServer, App, Error, HttpResponse};
 
 #[get("/sales/{id_product}/{id_moneda}/{anho}/{mes}/{usuario}")]
 async fn get_sales(
-    id_product: web::Path<i32>,
-    id_moneda: web::Path<i32>,
-    anho: web::Path<i32>,
-    mes: web::Path<u32>,
-    usuario: web::Path<String>
+    param: web::Path<(i32, i32, i32, u32, String)>
 ) -> Result<HttpResponse, Error> {
     //- GET PARAMS
-    let id_product = id_product.into_inner();
-    let id_moneda = id_moneda.into_inner();
-    let anho = anho.into_inner();
-    let mes = mes.into_inner();
-    let usuario = usuario.into_inner();
+    let id_product = param.0;
+    let id_moneda = param.1;
+    let anho = param.2;
+    let mes = param.3;
+    let usuario = param.4.to_string();
     //- OPEN CONNECTION
     let conn = Conn::new()?;
     //- MAKE A CONSULT
@@ -37,6 +33,8 @@ async fn get_sales(
 
 #[actix_rt::main]
 async fn main() -> io::Result<()> {
+    // std::env::set_var("RUST_LOG", "actix_web=debug,diesel=debug");
+    env_logger::init();
     let bind = "127.0.0.1:8080";
     HttpServer::new(move || {
         App::new()

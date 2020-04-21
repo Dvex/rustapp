@@ -25,6 +25,7 @@ impl Conn {
     pub fn new() -> Result<Self,Error>{
         dotenv::dotenv().ok();
         let db_url = std::env::var("DATABASE_URL")?;
+        // println!("db_url: {:?}", db_url);
         Ok(Conn(PgConnection::establish(&db_url)?))
     }
 
