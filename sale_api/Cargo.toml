@@ -3,14 +3,19 @@ name = "sale_api"
 version = "0.1.0"
 authors = ["Eduardo Cabrera Japa <dvex_92@hotmail.com>"]
 edition = "2018"
+license = "MIT"
+keywords = ["Sale", "API"]
+description = "Make a API that connect to DB by lib and show results"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-actix = "0.9.0"
 actix-web = "2.0.0"
 actix-rt = "1.0.0"
 actix-service = "1.0.0"
+
+serde = { version = "1.0.106", features = ["derive"] }
+serde_derive = "1.0.106"
 
 futures = "0.3.1"
 dotenv = "0.15.0"

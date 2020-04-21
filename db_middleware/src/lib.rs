@@ -4,6 +4,7 @@ extern crate chrono;
 
 mod models;
 mod schema;
+
 use diesel::pg::PgConnection;
 use diesel::prelude::*;
 use failure::Error;

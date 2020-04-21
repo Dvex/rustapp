@@ -7,8 +7,21 @@ extern crate actix_web;
 
 use std::{io};
 use db_middleware::Conn;
+use serde::{Deserialize, Serialize};
 
 use actix_web::{web, middleware, HttpServer, App, Error, HttpResponse};
+
+#[derive(Debug, Serialize, Deserialize)]
+struct MessageResponse {
+    status: bool,
+    data: String
+}
+
+#[get("/")]
+async fn index(item: web::Json<MessageResponse>) -> HttpResponse {
+    println!("model: {:?}", &item);
+    HttpResponse::Ok().json(item.0)
+}
 
 // Find sales in database
 #[get("/sales/{id_product}/{id_moneda}/{anho}/{mes}/{usuario}")]
@@ -37,13 +50,16 @@ async fn get_sales(
 
 #[actix_rt::main]
 async fn main() -> io::Result<()> {
-    // std::env::set_var("RUST_LOG", "actix_web=debug,diesel=debug");
+    std::env::set_var("RUST_LOG", "actix_web=info,diesel=debug");
+    dotenv::dotenv().ok();
     env_logger::init();
-    let bind = "127.0.0.1:8080";
+
+    let bind = std::env::var("BIND").unwrap();
+
     HttpServer::new(move || {
         App::new()
             .wrap(middleware::Logger::default())
-            .route("/", web::get().to(|| HttpResponse::Ok()))
+            .service(index)
             .service(get_sales)
     })
     .workers(4)
