@@ -46,3 +46,11 @@ pub struct NewTablaMoneda {
     pub iso_moneda: Option<String>,
     pub descripcion_moneda: Option<String>
 }
+
+#[derive(Queryable, Serialize, Deserialize, Clone, Debug)]
+pub struct TablaSummarySale {
+    pub descripcion_moneda: Option<String>,
+    pub descripcion_producto: Option<String>,
+    pub monto: Option<BigDecimal>,
+    pub fecha: Option<NaiveDateTime>
+}

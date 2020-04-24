@@ -11,13 +11,7 @@ use std::{io};
 use db_middleware::Conn;
 use serde::{Deserialize, Serialize};
 use actix_web::{web, middleware, HttpServer, App, Error, HttpResponse};
-use request::{Sale};
-
-#[derive(Debug, Serialize, Deserialize)]
-struct MessageResponse {
-    status: bool,
-    data: String
-}
+use request::{Sale, MessageResponse};
 
 #[get("/")]
 async fn index(/*item: web::Json<MessageResponse>*/) -> Result<HttpResponse, Error> {
@@ -70,7 +64,7 @@ async fn get_sales_post(
     let anho = form.anho;
     let mes = form.mes;
     let usuario = form._usuario.to_string();
-    // VERIFICA SI ES UNA MONEDA PERMITIDA
+    //- VERIFICA SI ES UNA MONEDA PERMITIDA
     let id_moneda = match form.moneda.as_str() {
         "PEN" => 1,
         "USD" => 2,

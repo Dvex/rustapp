@@ -1,4 +1,5 @@
 #[macro_use]
+#[warn(unused_imports)]
 extern crate diesel;
 extern crate chrono;
 
@@ -14,10 +15,10 @@ use chrono::{NaiveDate, NaiveDateTime};
 
 use models::{TablaMoneda, NewTablaMoneda};
 // use models::{TablaProducto};
-use models::{TablaVentas};
+use models::{TablaSummarySale};
 
 use schema::tabla_moneda;
-// use schema::tabla_producto;
+use schema::tabla_producto;
 use schema::tabla_ventas;
 
 // use mongodb::{Client, options::ClientOptions};
@@ -68,11 +69,19 @@ impl Conn {
             .map_err(|x| x.into())
     }
 
-    pub fn find_sale(&self,id_producto:Option<i32>, id_moneda:Option<i32>, anho:i32, mes:u32, _usuario:String) -> Result<Vec<TablaVentas>, Error> {
+    pub fn find_sale(&self,id_producto:Option<i32>, id_moneda:Option<i32>, anho:i32, mes:u32, _usuario:String) -> Result<Vec<TablaSummarySale>, Error> {
         let last_day = get_days_from_month(anho, mes) as u32;
         let dt_start: Option<NaiveDateTime> = Some(NaiveDate::from_ymd(anho, mes, 1).and_hms(0, 0, 0));
         let dt_end: Option<NaiveDateTime> = Some(NaiveDate::from_ymd(anho, mes, last_day).and_hms(0, 0, 0));
         tabla_ventas::table
+            .inner_join(tabla_moneda::table)
+            .inner_join(tabla_producto::table)
+            .select((
+                tabla_moneda::descripcion_moneda,
+                tabla_producto::descripcion_producto,
+                tabla_ventas::monto,
+                tabla_ventas::fecha
+            ))
             .filter(tabla_ventas::id_producto.eq(id_producto))
             .filter(tabla_ventas::id_moneda.eq(id_moneda))
             .filter(tabla_ventas::fecha.between(dt_start, dt_end))

@@ -12,3 +12,9 @@ pub struct Sale {
     pub mes: u32,
     pub _usuario: String
 }
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct MessageResponse {
+    status: bool,
+    data: String
+}
