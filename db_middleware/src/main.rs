@@ -51,6 +51,7 @@ fn process_file<P: AsRef<Path>>(p: P, re: Regex) -> Result<Vec<Record>, String> 
 
 fn main() -> Result<(), Error> {
   let conn = Conn::new()?;
+  let mongo = Conn::newMongo()?;
   /*
   let r = conn.put_currency("US", "Dolares from USA")?;
   let r = conn.put_product("Producto 1")?;

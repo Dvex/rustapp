@@ -20,16 +20,29 @@ use schema::tabla_moneda;
 // use schema::tabla_producto;
 use schema::tabla_ventas;
 
+// use mongodb::{Client, options::ClientOptions};
+
 pub struct Conn(PgConnection);
 
 impl Conn {
-    pub fn new() -> Result<Self,Error>{
+    pub fn new() -> Result<Self,Error> {
         dotenv::dotenv().ok();
         let db_url = std::env::var("DATABASE_URL")?;
         // println!("db_url: {:?}", db_url);
         Ok(Conn(PgConnection::establish(&db_url)?))
     }
-
+    /*
+    pub fn newMongo() -> Result<Self,Error> {
+        dotenv::dotenv().ok();
+        let db_mongo_uri = std::env::var("DATABASE_MONGO_URI").unwrap()?;
+        let mut client_options = ClientOptions::parse(db_mongo_uri)?;
+        let client = Client::with_options(client_options)?;
+        for db_name in client.list_database_names(None)? {
+            println!("{}", db_name);
+        }
+        Ok(client)
+    }
+    */
     pub fn put_currency(&self, iso_moneda:Option<String>, descripcion_moneda:Option<String>) -> Result<TablaMoneda, Error> {
         let ncu = NewTablaMoneda{iso_moneda, descripcion_moneda};
         diesel::insert_into(tabla_moneda::table)
